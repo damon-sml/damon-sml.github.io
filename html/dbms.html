@@ -1,0 +1,267 @@
+<html>
+<head>
+<title>Database Systems</title>
+</head>
+
+<!body bgcolor="#ffffff">
+<body background="http://www.cs.ccu.edu.tw/~damon/img/assorted.gif">
+
+<center>
+<b>
+<font size="4" color="blue">Database Systems</font>
+資料庫系統<br>
+Spring 2026<br>
+</b>
+</center>
+
+<hr>
+
+<font size="3">
+
+<pre>
+<img src="http://www.cs.ccu.edu.tw/~damon/img/ball/cyan.gif"> <b><font color="fuchsia">Instructor:</font> <a href="http://member.acm.org/~damon/"><font color="blue">劉 興 民</font></a>                <img src="http://www.cs.ccu.edu.tw/~damon/img/ball/greencyan.gif"> <b><font color="fuchsia">Head Teaching Assistant</font> 首席助教</b>
+Lectures: Tue, Thr 14:45-16:00            馬惇馨 <a href="mailto:dunxinm@gmail.com"><tt>dunxinm@gmail.com</tt></a>
+          工學院A館104教室                工學院A館410室
+Office:   工學院A館403室                  分機23153
+e-Mail:   <a href="mailto:damon@computer.org"><tt>damon@computer.org</tt></a>
+Phone:    分機33118
+</pre>
+
+<hr>
+
+<!This course provides an introduction to relational database management
+systems. Topics covered include data models (ER and relational model),
+data storage and access methods (files, indices),
+query languages (SQL, relational algebra, relational calculus, QBE),
+query evaluation, query optimization, transaction management,
+concurrency control, crash recovery, and some advanced topics
+(distributed databases, object-relational databases).
+A large component of the course is a project that involves
+implementing and testing components of a relational database
+management system.>
+<!p>
+
+As the first introductory course for databases,
+this course is intended to give students a solid background in
+database management systems, particularly relational database
+management systems. Such systems will be examined from two
+perspectives: that of a database system user, and that of a database
+system implementor.
+<p>
+
+First, from the user perspective (i.e., how to use a database system),
+the course will discuss conceptual data modeling, the relational and
+other data models, database schema design, relational algebra,
+and the SQL query language. Further, from the system perspective
+(i.e., how to design and implement a database system),
+the course will study data representation, indexing,
+query optimization and processing, and transaction processing.
+
+We will also devote some time to current topics of research such as
+NoSQL databases, data mining and warehousing, cloud databases.
+<p>
+
+<!Approximately half of the course material will focus on the use of
+database management systems. The concept of a data model will be
+introduced, the entity-relationship model will be covered, and
+then the relational data model and the SQL query language will be
+examined in detail. This part of the course will also cover
+logical and physical database design issues. Advanced features
+such as views and security will also be discussed briefly.
+Students will exercise their knowledge of this part of the
+course material by designing a small database and running queries.>
+<!p>
+
+<!The other half of the course will concentrate on the implementation
+of relational database management systems. Topics to be covered include
+file organizations, access methods (e.g., ISAM, B+ trees, linear and
+extendible hashing), external sorting techniques, the
+implementation of relational database operations, and the basic
+concepts of query optimization. Concurrency control, recovery,
+and other advanced implementation issues will also be touched
+upon as time allows. Associated with this part of the course
+will be a project involving the implementation of a fairly complete
+single-user relational database management system.>
+<!p>
+
+<!Although this is a two-part course, the presentation of the two
+parts will be interleaved in order to spread the course's programming
+work out as smoothly as possible over the whole semester.>
+<!p>
+
+All work must be done on your own personal installation of
+<font color="red">MySQL</font> /
+<font color="red">MongoDB</font>.
+Using another students computer is only acceptable if work is clearly
+separated. No exceptions or negotiating.
+<p>
+
+<!The medium of instruction is English.>
+<!Most (><!font color="red"><!50%><!/font><!)
+oral instruction in lecture will be in>
+<!font color="red"><!English><!/font><!.>
+
+<hr>
+
+<img
+ src="http://www.cs.ccu.edu.tw/~damon/img/ball/purple.gif">
+<b><font color="fuchsia">Readings</font></b><br>
+<menu>
+ <li><a href="http://books.mcgraw-hill.com/getbook.php?isbn=0072465638&template=">Database Management Systems</a>,
+     <a href="http://pages.cs.wisc.edu/~dbbook/"
+        style="text-decoration:none">Raghu Ramakrishnan</a> and Johannes Gehrke,
+     3rd Edition,
+     McGraw-Hill, ISBN: 0-07-123057-2.
+     [<font color="red">Required</font>]
+
+ <li><a href="http://www.pearsonhighered.com/educator/product/Database-Systems-The-Complete-Book-2E/9780131873254.page">Database Systems: The Complete Book</a>,
+     Hector Garcia-Molina, <a href="http://infolab.stanford.edu/~ullman/dscb.html"
+        style="text-decoration:none">Jeffrey Ullman</a>, and Jennifer Widom,
+     2nd Edition,
+     Prentice Hall, ISBN: 0-13-187325-3.
+     [<font color="maroon">Reference</font>]
+
+ <li><a href="http://www.aw-bc.com/catalog/academic/product/0,1144,0321369572,00.html">Fundamentals of Database Systems</a>,
+     Ramez Elmasri and Shamkant Navathe, 5th Edition,
+     Addison-Wesley, ISBN: 0-32-136957-2.
+     [<font color="maroon">Reference</font>]
+
+ <li><a href="http://books.mcgraw-hill.com/getbook.php?isbn=0072958863&template=">Database System Concepts</a>,
+     Abraham Silberschatz, Henry Korth, and S. Sudarshan, 5th Edition,
+     McGraw-Hill, ISBN: 0-07-295886-3.
+     [<font color="maroon">Reference</font>]
+
+ <li><a href="http://www.aw-bc.com/catalog/academic/product/0,1144,0321197844,00.html">Introduction to Database Systems</a>,
+     C. J. Date, 8th Edition,
+     Addison-Wesley, ISBN: 0-321-19784-4.
+     [<font color="maroon">Reference</font>]
+
+ <li><a href="https://www.oreilly.com/library/view/mongodb-the-definitive/9781491954454/">MongoDB: The Definitive Guide: Powerful and Scalable Data Storage</a>,
+     Shannon Bradshaw, Eoin Brazil, and Kristina Chodorow, 3rd Edition,
+     O'Reilly Media, ISBN: 978-1-4919-5446-1.
+     [<font color="maroon">Reference</font>]
+
+ <li><a href="https://www.oreilly.com/library/view/the-definitive-guide/9781484211823/">The Definitive Guide to MongoDB: A complete guide to dealing with Big Data using MongoDB</a>,
+     David Hows, Eelco Plugge, Peter Membrey, and Tim Hawkins, 3rd Edition,
+     Apress, ISBN: 978-1-4842-51182-3.
+     [<font color="maroon">Reference</font>]
+</menu>
+
+<img
+ src="http://www.cs.ccu.edu.tw/~damon/img/ball/smiley.gif">
+<b><font color="fuchsia">Indicative Topics</font></b><br>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td align="left" valign="top">
+<ol start="1"><b>
+ <li> The relational model
+ <li> Relational algebra and calculus
+ <li> SQL: queries, constraints, triggers
+ <li> Storing data: disks and files
+ <li> Tree-structured indexing
+</b></ol>
+
+<td align="left" valign="top">
+<ol start="6"><b>
+ <li> Hash-based indexing
+ <li> Query evaluation
+ <li> Transaction management
+ <li> Concurrency control
+ <li> Crash recovery
+</b></ol>
+
+<td align="left" valign="top">
+<ol start="11"><b>
+ <li> Database tuning
+ <li> Security and authorization
+ <li> XML data
+ <li> Parallel databases
+ <li> Distributed databases
+</b></ol>
+</table>
+<p>
+
+<img
+ src="http://www.cs.ccu.edu.tw/~damon/img/ball/red.gif">
+<b><font color="fuchsia">Grading</font></b><br>
+    Programming projects and written assignments [<font color="teal">25%</font>];
+    Midterm [<font color="teal">35%</font>];
+    Final [<font color="teal">30%</font>];
+    Punctuality, attendance, and
+    participation in discussions [<font color="teal">10%</font>].<br>
+<font size="2">
+為鼓勵大學部二年級同學提早修習本科目，對其將採取不同的評分標準：
+1) 大二同學的修課人數將獨立，不納入修課總人數來計算；
+2) 大二同學的學期個人總成績，將依據其他非大二同學調整之後的分數，
+   向上再提昇至少2至5分 (但以99分為上限)。
+</font><br>
+<font size="2" color="maroon">
+Cutoff for passing grades at the end of the semester will be
+the raw score 60 or close to the scale of 45%,
+depending on which one is lower.
+Exceptions are sometimes made for classes perceived to be
+significantly stronger or weaker than the norm.
+
+Moreover, please use the discussion board to post general questions
+about the course. The staff will attempt to answer these questions
+in a timely manner, but do not hesitate to answer someone else's
+question if you know the answer.
+This will count toward "class participation" and your efforts
+will not be unnoticed.
+</font>
+<p>
+
+<img
+ src="http://www.cs.ccu.edu.tw/~damon/img/ball/greencyan.gif">
+<b><font color="fuchsia">Academic Honesty Policy</font></b><br>
+
+<font size="2" color="maroon">
+All graded materials (examinations and programming assignments)
+must be strictly individual efforts.
+
+Students are encouraged to study together, and to discuss general
+problem-solving techniques that are useful on assignments.
+But when working on an assignment, students should not share
+detailed notes, pseudocode or code, and all work submitted must be
+done individually.
+
+Students are expected to maintain the highest standards of
+academic conduct. Honest students are frustrated by the unfairness
+of cheating that goes undetected and therefore unpunished.
+Students who cheat skew the grading curve in a class, resulting in
+lower grades for students who worked hard and did their own work.
+Therefore, if you witness any cheating (in examinations or program
+assignments) by classmates, please report it to the instructor
+as soon as possible.
+</font>
+<p>
+
+<!img
+ src="http://www.cs.ccu.edu.tw/~damon/img/ball/yellow.gif">
+<!b><!font color="fuchsia"><!Program Assignments><!/font><!/b><!br>
+<!p>
+
+<img
+ src="http://www.cs.ccu.edu.tw/~damon/img/ball/yellow.gif">
+<a href="https://www.cs.ccu.edu.tw/~damon/secure/course-wk.html"
+ style="text-decoration:none">
+<b><font color="fuchsia">Course Works</font></b></a>
+課業倉儲<br>
+<p>
+
+<!img
+ src="http://www.cs.ccu.edu.tw/~damon/img/ball/cyan.gif">
+<!b><!font color="fuchsia">
+<!Lecture Viewgraphs and Other Resources><!/font><!/b><!br>
+<!p>
+
+<img
+ src="http://www.cs.ccu.edu.tw/~damon/img/ball/multi.gif">
+<a href="http://140.123.101.97/login.htm" style="text-decoration:none">
+<b><font color="fuchsia">Discussion Board</font></b></a>
+課程討論區<br>
+
+</font>
+
+</body>
+</html>

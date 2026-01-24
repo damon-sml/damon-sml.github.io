@@ -1,0 +1,261 @@
+<html>
+<head>
+<title>Principles of Computational Photography</title>
+</head>
+
+<!body background="http://www.cs.ccu.edu.tw/~damon/img/weave.gif">
+<body bgcolor="bisque">
+
+<center>
+<b>
+<font size="4" color="blue">
+ Computational Photography: Applied Graphics and Imaging</font>
+計算攝影學：應用圖學與影像技術<br>
+Fall 2024<br>
+</b>
+</center>
+
+<hr>
+
+<font size="3">
+
+<pre>
+<img src="http://www.cs.ccu.edu.tw/~damon/img/ball/cyan.gif"> <b><font color="fuchsia">Instructor:</font> <a href="http://member.acm.org/~damon/"><font color="blue">劉 興 民</font></a>                <img src="http://www.cs.ccu.edu.tw/~damon/img/ball/greencyan.gif"> <b><font color="fuchsia">Head Teaching Assistant</font> 首席助教</b>
+Lectures: Tue 9:10-12:00                  王偉曛 <a href="mailto:asdfg3215740@gmail.com"><tt>asdfg3215740@gmail.com</tt></a>
+          工學院A館205教室                工學院A館410室
+Office:   工學院A館403室                  分機23153
+e-Mail:   <a href="mailto:damon@computer.org"><tt>damon@computer.org</tt></a>
+Phone:    分機33118
+</pre>
+
+<hr color="fuchsia">
+
+Computational photography is an emerging field at the intersection of
+computer graphics, image processing, machine vision, applied optics,
+and increasingly, machine learning.
+This class will look into how computation can be used to capture,
+create, and enhance digital imagery in an effort to move beyond the
+constraints of traditional cameras.
+<!Computational photography is an emerging field created by the
+convergence of computer graphics, image processing, machine vision,
+and applied optics.
+Its role is to overcome the limitations of the traditional camera by
+using computational techniques to capture, enhance, and combine imagery
+for a more compelling and meaningful visualization of the world around
+us.>
+<p>
+
+This course covers fundamentals and applications of hardware and
+software techniques, with an emphasis on software methods.
+Topics include cameras and image formation, image processing and
+image representations, high-dynamic-range-imaging, human visual
+perception and color, single-view and multiple-view 3D model
+reconstruction, morphing,
+data-rich photography, super-resolution, and image-based rendering.
+<p>
+
+The course will explain the principles behind many of the advanced
+tools that can be found in Adobe Photoshop, although the use of this
+package itself is outside the scope of the course.
+Students will have written programs to create optical illusions,
+add or remove objects from a photograph, smoothly morph
+between faces, automatically stitch together photos into panoramas,
+and more.
+<p>
+
+<font face="DFKai-sb">
+隨著數位相機之進步與普及，計算攝影學已成為電腦圖學之一重要研究方向。
+計算攝影學研究如何利用數位計算來結合、編輯及改善數位影像、
+突破一般相機的影像捕捉限制及有效率地利用大量的高解析度數位相片等課題，
+如利用全景相片或 super-resolution 提升傳統相機之解析度，高動態範圍影像
+(high dynamic range imaging) 能更精確地記錄場景的能量 (radiance)、
+改善相機之光學元件及感測器以記錄多視角之影像 (light field)
+以達到動態重聚焦 (re-focusing) 的效果，
+結合使用閃光燈及不使用閃光燈的影像提升成像品質，
+開發新演算法去除由於震動 (shake) 造成的影像模糊 (blur) 等。
+這些技術隨著數位相機的普及將有非常廣泛的應用，
+使計算攝影學研究同時兼具高度之學術及實用價值。</font>
+<font size="2">〔節錄自國科會資訊工程學門研究領域規畫書內容〕</font><p>
+
+<!The spoken language of ><!font color="red"><!50%><!/font><! lecture will be>
+<!font color="red"><!English><!/font><!.>
+
+<hr color="lime">
+
+<img
+ src="http://www.cs.ccu.edu.tw/~damon/img/ball/purple.gif">
+<b><font color="fuchsia">Readings</font></b><br>
+<menu>
+ <li><a href="http://www.springer.com/computer/image+processing/book/978-1-84882-934-3">Computer Vision: Algorithms and Applications</a>,
+     <a href="http://szeliski.org/Book/"
+        style="text-decoration:none">Richard Szeliski</a>,
+     Springer, ISBN: 1-84882-934-5.
+     [<font color="red">Essential</font>]
+     (see
+     <a href="http://www.cs.ccu.edu.tw/~damon/tmp/SzeliskiBook_20100903_draft.pdf"
+        style="text-decoration:none">link</a>
+     for a draft of this book available online)
+     &mdash; A good general reference on computer vision methods,
+     with particularly good coverage of topics relevant to photography.
+
+ <li><a href="http://www.crcpress.com/product/isbn/9781439817490">Computational Photography: Methods and Applications</a>,
+     <a href="http://www.colorimageprocessing.com/books-CP.htm"
+        style="text-decoration:none">Rastislav Lukac</a>,
+     CRC Press, ISBN: 978-1-4398-1749-0.
+     [<font color="maroon">Supplementary</font>]
+
+ <li><a href="http://www.crcpress.com/product/isbn/9781568813134">Computational Photography: Mastering New Techniques for Lenses, Lighting, and Sensors</a>,
+     <a href="http://web.media.mit.edu/~raskar/photo/"
+        style="text-decoration:none">Ramesh Raskar</a>
+     and Jack Tumblin,
+     A K Peters, ISBN: 1-56881-313-9.
+     [<font color="maroon">Supplementary</font>]
+
+ <li><a href="http://www.pearsonhighered.com/educator/product/Computer-Vision-A-Modern-Approach-2E/9780136085928.page">Computer Vision: A Modern Approach</a>,
+     <a href="http://luthuli.cs.uiuc.edu/~daf/CV2E-site/cv2eindex.html"
+        style="text-decoration:none">David Forsyth</a>
+     and Jean Ponce, 2nd Edition,
+     Pearson,
+     ISBN: <a href="http://www.pearson.ch/HigherEducation/ComputerScience/ComputerGraphics/1471/9780273764144/Computer-Vision-A-Modern.aspx"
+              style="text-decoration:none">0-27376-414-4</a>.
+     [<font color="maroon">Supplementary</font>]
+
+ <li><a href="http://shop.oreilly.com/product/9780596516130.do">Learning OpenCV</a>: Computer Vision with the
+     <a href="http://opencv.willowgarage.com/wiki/"
+        style="text-decoration:none">OpenCV Library</a>,
+     Gary Bradski and Adrian Kaehler,
+     O'Reilly Meida, ISBN: 0-596-51613-4.
+     [<font color="maroon">Supplementary</font>]
+     (see
+     <a href="http://www.cs.ccu.edu.tw/~damon/photo/,OpenCV/,opencv2refman.pdf"
+        style="text-decoration:none">link</a>
+     for reference manual)
+
+ <li><a href="http://www.informit.com/store/product.aspx?isbn=0321552628">The OpenGL Programming Guide</a>: The Official Guide to Learning
+     <a href="http://www.opengl.org/sdk/"
+        style="text-decoration:none">OpenGL</a>,
+     Dave Shreiner, 7th Edition,
+     Addison-Wesley Professional, ISBN: 0-321-55262-8.
+     [<font color="maroon">Supplementary</font>]
+     (an older version is online in
+     <a href="http://www.glprogramming.com/red/"
+        style="text-decoration:none">html</a>)
+
+ <li><a href="http://www.mathworks.com/products/matlab/">Matlab</a>: The Language of Technical Computing.
+     [<font color="maroon">Supplementary</font>]
+     (an electronic edition of Experiments with Matlab is available in
+     <a href="http://www.cs.ccu.edu.tw/~damon/photo/,MATLAB/,MolerBook.pdf"
+        style="text-decoration:none">e-book</a>)
+
+ <li><a href="http://www.apress.com/us/book/9781430248996">Beginning 3D Game Development with Unity 4</a>,
+     Sue Blackman, 2nd Edition,
+     Apress, ISBN: 978-1-4302-4899-6.
+     [<font color="maroon">Supplementary</font>]
+
+ <li><a href="http://www.nr.com/">Numerical Recipes</a>: The Art of Scientific Computing.
+     [<font color="maroon">Supplementary</font>]
+
+ <li><a href="https://www.cambridge.org/tw/universitypress/subjects/computer-science/pattern-recognition-and-machine-learning/dive-deep-learning?format=PB&isbn=9781009389433">Dive into Deep Learning</a>,
+     Aston Zhang, Zachary C. Lipton, Mu Li, and Alexander J. Smola.
+     [<font color="maroon">Supplementary</font>]
+     (is online in
+     <a href="https://d2l.ai/"
+        style="text-decoration:none">html</a>)
+
+ <li><a href="https://mitpress.mit.edu/9780262035613/deep-learning/">Deep Learning</a>,
+     Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
+     [<font color="maroon">Supplementary</font>]
+     (is online in
+     <a href="https://www.deeplearningbook.org/"
+        style="text-decoration:none">html</a>)
+</menu>
+
+<img
+ src="http://www.cs.ccu.edu.tw/~damon/img/ball/smiley.gif">
+<b><font color="fuchsia">Indicative Topics</font></b><br>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td align="left" valign="top">
+<ol start="1"><b>
+ <li> A crash course in OpenGL
+ <li> Cameras and image formation
+ <li> Color and human visual perception
+ <li> Aesthetic photo quality assessment
+ <li> Interactive image segmentation
+ <li> Gradient image manipulation
+ <li> Matting &amp; inpainting
+ <!li> <!Markov random fields>
+ <li> Texture synthesis &amp; filling
+ <li> Warping &amp; morphing
+ <li> Structure aware retargeting
+ <li> Panorama stitching
+</b></ol>
+
+<td align="left" valign="top">
+<ol start="12"><b>
+ <li> Internet-scale photo collections
+ <li> Photo tourism and structure from motion
+ <li> High dynamic range images
+ <li> Tone mapping and bilateral filters
+ <li> Image restoration and motion deblurring
+ <li> Optics &amp; lens technology
+ <li> Defocus and depth of field
+ <li> Computational illumination
+ <!li> <!Non-photorealistic rendering>
+ <li> Light field capture &amp; rendering
+ <li> GPU data-parallel computing
+ <li> An introduction to deep learning
+</b></ol>
+</table>
+<p>
+
+<img
+src="http://www.cs.ccu.edu.tw/~damon/img/ball/red.gif">
+<b><font color="fuchsia">Assessment</font></b><br>
+<!&nbsp;&nbsp;>
+    Laboratories [<font color="teal">25%</font>];
+    Midterm [<font color="teal">33%</font>];
+    Final exam [<font color="teal">20%</font>];
+    Final project / PowerPoint slides [<font color="teal">12%</font>];
+    <!In-class paper presentation
+    [><!font color="teal"><!5%><!/font><!：Computer Science graduate only].>
+    Punctuality, attendance, and
+    participation in discussions [<font color="teal">10%</font>].<br>
+    These weights are <font color="red">tentative</font>
+    and subject to future adjustment.<br>
+<font size="2">
+為鼓勵大學部同學修習本科目，對其將採取不同的評分標準：
+1) 大學部同學的修課人數將獨立，不納入修課總人數來計算；
+2) 大學部同學的學期個人總成績，將依據其他研究所同學調整之後的分數，
+   向上再提昇至少2至5分 (但以99分為上限)。
+</font><p>
+
+<!img
+ src="http://www.cs.ccu.edu.tw/~damon/img/ball/yellow.gif">
+<!b><!font color="fuchsia"><!Program Assignments><!/font><!/b><!br>
+<!p>
+
+<img
+ src="http://www.cs.ccu.edu.tw/~damon/img/ball/yellow.gif">
+<a href="https://www.cs.ccu.edu.tw/~damon/secure/course-wk.html"
+ style="text-decoration:none">
+<b><font color="fuchsia">Course Works</font></b></a>
+課業倉儲<br>
+<p>
+
+<!img
+ src="http://www.cs.ccu.edu.tw/~damon/img/ball/cyan.gif">
+<!b><!font color="fuchsia">
+<!Lecture Viewgraphs and Other Resources><!/font><!/b><!br>
+<!p>
+
+<img
+ src="http://www.cs.ccu.edu.tw/~damon/img/ball/multi.gif">
+<a href="http://140.123.101.97/login.htm" style="text-decoration:none">
+<b><font color="fuchsia">Discussion Board</font></b></a>
+課程討論區<br>
+
+</font>
+
+</body>
+</html>
